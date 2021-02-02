@@ -35,12 +35,14 @@ public:
   // return its variety with the highest price
   std::string getHighestVariety (std::string fruit);
 };
-
+// the default constructor
 FruitPrices::FruitPrices()
 {
 
 }
-
+// method which takes in the filename of the pricelist and reads in the data to
+// its member variables. It should return the number of fruits that were read
+// from the file
 int FruitPrices::readPriceList (std::string filename)
 {
   int count = 0;
@@ -67,7 +69,9 @@ int FruitPrices::readPriceList (std::string filename)
   count--;
   return count;
 }
-
+// given a fruit name, return its variety with the highest price. If the fruit
+// does not exist, return the empty string (“”). E.g.,
+// getHighestVariety(“Apple”) should return Jazz
 std::string FruitPrices::getHighestVariety (std::string fruit)
 {
   int fruitfound = 0;
